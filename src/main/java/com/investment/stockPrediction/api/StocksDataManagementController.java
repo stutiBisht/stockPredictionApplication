@@ -34,6 +34,12 @@ public class StocksDataManagementController {
 	@Autowired
 	StocksDataManagementService stocksDataManagementService;
 
+	@RequestMapping("/login")
+	public String loginPage(ModelMap model) throws ApplicationValidationException {
+		logger.info("Inside defaultPage method of StocksDataManagementController");
+		return "uploadData";
+	}
+
 	@RequestMapping("/")
 	public String defaultPage(ModelMap model) throws ApplicationValidationException {
 		logger.info("Inside defaultPage method of StocksDataManagementController");
